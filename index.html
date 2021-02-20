@@ -9,7 +9,7 @@
     <!-- Подключение CSS -->
     <link rel="stylesheet" href="css/style.css">
     <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
-    <link rel="shortcut icon" href="img/icons/favicon.ico">
+    <link rel="shortcut icon" href="img/icons/favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -45,19 +45,33 @@
                     <li>
                         <a href="#id5" class="header__link" id="link5">Контакты</a>
                     </li>
+                    <li class="mob">
+                        <a href="tel:+80076700099" class="header__phone">
+                            <div class="header__phone-circle">
+                                <svg class="icon-all">
+                                    <use xlink:href="img/svg/sprite.svg#phone"></use>
+                                </svg>
+                            </div>
+                        </a>
+                            <div class="header__phone-wrapper">
+                                <a href="tel:+80076700099" class="header__phone-title header__phone-title-bottom">+800 767 000 99</a>
+                                <a href="popup-0" class="header__phone-subtitle js-btn-popup">Запишитесь сейчас</a>
+                            </div>
+                    </li>
                 </ul>
             </nav>
-            <a href="tel:+80076700099" class="header__phone">
+            <a href="tel:+80076700099" class="header__phone pc">
                 <div class="header__phone-circle">
                     <svg class="icon-all">
                         <use xlink:href="img/svg/sprite.svg#phone"></use>
                     </svg>
                 </div>
-                <div class="header__phone-wrapper">
-                    <div class="header__phone-title header__phone-title-bottom">+800 767 000 99</div>
-                    <div class="header__phone-subtitle">Запишитесь сейчас</div>
-                </div>
             </a>
+                <div class="header__phone-wrapper pc">
+                    <a href="tel:+80076700099" class="header__phone-title header__phone-title-bottom">+800 767 000 99</a>
+                    <a href="popup-0" class="header__phone-subtitle js-btn-popup">Запишитесь сейчас</a>
+                </div>
+            
         </div>
       </div>
 </header>                <div class="container fullscreen-container">
@@ -67,9 +81,9 @@
                         <p>Таким образом сложившаяся структура организации требуют от нас анализа модели развития. Разнообразный и богатый опыт рамки и место обучения кадров способствует подготовки и реализации новых предложений.</p>
                         <div class="fullscreen-wrapper">
                             <a href="popup-0" class="fullscreen__link js-btn-popup">Выбрать тариф</a>
-                            <a href="#" class="fullscreen__video">
+                            <a href="popup-1" class="fullscreen__video js-btn-popup">
                                 <span class="fullscreen__video-circle">
-                                    <img src="img/icons/triangle.png" alt="">
+                                    <div class="triangle"></div>
                                 </span>
                                 <span class="fullscreen__video-text">Видео-презентация</span>
                             </a>
@@ -158,7 +172,7 @@
                                     <li>Есть много вариантов</li>
                                     <li>Есть много вариантов</li>
                                 </ul>
-                                <a href="#" class="fullscreen__link tarif-link">Заказать</a>
+                                <a href="popup-0" class="fullscreen__link tarif-link js-btn-popup">Заказать</a>
                             </div>
                         </div>
                         <div class="tarif__body-item">
@@ -178,7 +192,7 @@
                                     <li>Есть много вариантов</li>
                                     <li>Есть много вариантов</li>
                                 </ul>
-                                <a href="#" class="fullscreen__link tarif-link">Заказать</a>
+                                <a href="popup-0" class="fullscreen__link tarif-link js-btn-popup">Заказать</a>
                             </div>
                         </div>
                         <div class="tarif__body-item">
@@ -201,7 +215,7 @@
                                     <li>Есть много вариантов</li>
                                     <li>Есть много вариантов</li>
                                 </ul>
-                                <a href="#" class="fullscreen__link tarif-link">Заказать</a>
+                                <a href="popup-0" class="fullscreen__link tarif-link js-btn-popup">Заказать</a>
                             </div>
                         </div>
                     </div>
@@ -462,7 +476,6 @@
         <div class="popup__wrapp js-popup__wrapp">
             <span class="popup__close js-popup__close"></span>
             <div class="popup-container">
-                <div class="popup-container">
                     <h2 class="popup__title">Перезвоним Вам в ближайшее время!</h2>
                     <form action="">
                         <label class="requirements__label">Ваше имя: </label>
@@ -473,7 +486,19 @@
                         <textarea class="popup__input requirements__input popup__textarea" placeholder="Сообщение"></textarea>
                         <button class="requirements-btn">Жду звонка!</button>
                     </form>
-                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup js-popup" data-id-popup="popup-1">
+        <div class="popup__opas"></div>
+        <div class="popup__wrapp wrap-video js-popup__wrapp">
+            <span class="popup__close js-popup__close"></span>
+            <div class="popup-container">
+                    <h2 class="popup__title">Видео-презентация</h2>
+                    <iframe width="100%" height="100%"
+                        src="https://www.youtube.com/embed/z3GS5oYGq5U">
+                    </iframe>
             </div>
         </div>
     </div>

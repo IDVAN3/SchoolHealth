@@ -2,19 +2,6 @@
 'use strict'
 $(document).ready(function () {
 
-    /*ibg*/
-
-    function ibg() {
-        $.each($('.ibg'), function (index, val) {
-            if ($(this).find('img').length > 0) {
-                let src_img = $(this).find('img').attr('src');
-                $(this).css('backgroundImage', 'url("' + src_img + '")');
-            }
-        });
-    }
-
-    ibg();
-
     /* === popup start === */
 
     let unlock = true;
@@ -32,7 +19,7 @@ $(document).ready(function () {
           }
         }
         body.style.paddingRight = lockPaddingValue;
-        body.classList.add("lock");
+        body.classList.add("lock-scroll");
       
         unlock = false;
         setTimeout(function () {
@@ -47,7 +34,7 @@ $(document).ready(function () {
             el.style.paddingRight = "0px";
           }
           body.style.paddingRight = "0px";
-          body.classList.remove("lock");
+          body.classList.remove("lock-scroll");
         }, timeout);
       
         unlock = false;
@@ -120,6 +107,11 @@ $(document).ready(function () {
 
     // let heightHeader = $(".header").height();
     $('.header__list li a').click(function(){
+        if($('body').has('.lock')) {
+          $('body').removeClass('lock');
+          $('.header__burger,.header__menu').removeClass('active');
+        }
+        
         let element = $(this).attr('href');
         // let dist = $(element).offset().top-heightHeader;
         let dist = $(element).offset().top;
@@ -128,6 +120,13 @@ $(document).ready(function () {
 
         return false;
     })
+
+    // header__burger
+
+    $('.header__burger').click(function(event) {
+      $('.header__burger,.header__menu').toggleClass('active');
+      $('body').toggleClass('lock');
+    });
 
 });
 /*кнопка прокрутки вверх*/
