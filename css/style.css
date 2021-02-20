@@ -1194,6 +1194,11 @@ textarea.error {
   height: calc(100% - 80px);
 }
 
+.video-iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .wrapper-scroll {
   position: fixed;
   right: 20px;
