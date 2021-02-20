@@ -285,6 +285,9 @@ li.counter li:before {
   align-items: center;
   transition: 0.4s;
 }
+.header__phone-circle:hover {
+  background: #DE8045;
+}
 .header__phone-wrapper {
   padding-left: 15px;
   display: flex;
@@ -312,6 +315,9 @@ li.counter li:before {
 .header__phone-title:hover::before {
   width: 100%;
 }
+.header__phone-title:hover .header__phone-circle {
+  background: #DE8045;
+}
 .header__phone-title-bottom {
   margin-bottom: 5px;
 }
@@ -336,8 +342,8 @@ li.counter li:before {
 .header__phone-subtitle:hover::before {
   width: 95%;
 }
-.header__phone:hover .header__phone-circle {
-  background: #DE8045;
+.header__phone-subtitle:hover .header__phone-circle {
+  background: #819384 !important;
 }
 
 .icon-all {
@@ -936,17 +942,22 @@ textarea.error {
   height: 37px;
   transform: translateY(50%);
   top: 50%;
+  transition: 0.4s;
+  background-color: transparent;
+}
+.result-slider .slick-arrow:hover {
+  transform: translateY(50%) translateX(5px);
 }
 
 .result-slider .slick-arrow.slick-prev {
   left: 0;
-  background: url(../img/icons/left.png);
+  background-image: url(../img/icons/left.png);
   background-size: cover;
 }
 
 .result-slider .slick-arrow.slick-next {
   right: 0;
-  background: url(../img/icons/right.png);
+  background-image: url(../img/icons/right.png);
   background-size: cover;
 }
 
@@ -1129,7 +1140,7 @@ textarea.error {
 }
 
 .popup__title {
-  color: #819384;
+  color: #DE8045;
   font-family: "Lobster", cursive;
   font-size: 24px;
   font-weight: 600;
@@ -1154,8 +1165,8 @@ textarea.error {
 
 .requirements-btn {
   margin-top: 17px;
-  background: #819384;
-  border: 1px solid #819384;
+  background: #DE8045;
+  border: 1px solid #DE8045;
   border-radius: 20px;
   font-size: 16px;
   font-weight: 500;
@@ -1166,7 +1177,7 @@ textarea.error {
 }
 .requirements-btn:hover {
   background: #fff;
-  color: #819384;
+  color: #DE8045;
 }
 
 .popup__textarea {
@@ -1526,7 +1537,7 @@ textarea.error {
   }
 
   .main-body h2 {
-    font-size: 40px;
+    font-size: 32px;
   }
   .main-body h2::before {
     width: 100px;
@@ -1663,6 +1674,15 @@ textarea.error {
   }
 }
 @media (max-width: 640px) {
+  .main-body h2::before {
+    width: 0px;
+    height: 0px;
+  }
+  .main-body h2::after {
+    width: 0px;
+    height: 0px;
+  }
+
   .program__body-subitem {
     flex: 0 0 100%;
   }
@@ -1679,7 +1699,20 @@ textarea.error {
   .result-slider__item .about__text {
     padding: 10px;
   }
+
+  .fullscreen {
+    background-position: 72% 50%;
+  }
 }
 @media (max-width: 360px) {
-  /**/
+  .result__wrapper-info {
+    flex-direction: column;
+  }
+  .result__wrapper-info p {
+    font-size: 16px;
+  }
+
+  .result__bold:not(:last-child) {
+    padding-right: 0px;
+  }
 }
