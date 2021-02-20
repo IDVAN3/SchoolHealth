@@ -1425,10 +1425,6 @@ textarea.error {
     padding: 12px 27px;
   }
 
-  .tarif-link {
-    margin: 0 -20px -8px -20px;
-  }
-
   .about__text {
     padding: 20px;
   }
@@ -1654,6 +1650,11 @@ textarea.error {
 
   .fullscreen__link {
     max-width: 220px;
+  }
+
+  .tarif-link {
+    margin: 0 -20px -8px -20px;
+    max-width: 100vw;
   }
 }
 @media (max-width: 640px) {
